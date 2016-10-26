@@ -1,0 +1,81 @@
+package lesson1;
+
+import java.util.Formatter;
+
+public class Cat {
+	private String name;
+	private int age;
+	private double weight;
+	private String color;
+	
+	
+	public Cat(String name, int age, double weight, String color) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.weight = weight;
+		this.color = color;
+	}
+
+
+	public Cat() {
+		
+	}
+	
+	
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public int getAge() {
+		return age;
+	}
+
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+
+	public double getWeight() {
+		return weight;
+	}
+
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+
+	public String getColor() {
+		return color;
+	}
+
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+
+	public void meow(){
+		System.out.println("Meow-meow-MEEEOOOOOWWWW");
+	}
+
+
+	@Override
+	public String toString() {
+		Formatter fr = new Formatter();
+		fr.format("Name = "+"%-5.10s\t"+"age = "+"%-4d\t"+" weight = "+"%-7.2f\t"+" color = "+"%-5.6s", name,age,weight,color);
+		String text = fr.toString();fr.close();
+		return text; 
+		/*"Cat [name = " + name + ",  age = " + age + ", weight = " + weight + ", color = " + color + "]";*/
+		
+	}
+	
+}
